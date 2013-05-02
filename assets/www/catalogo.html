@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <script src="jquery.mobile/jquery.mobile-1.2.0.min.js"></script>
+        <script src="js/catalogo.js"></script>
+        <link rel="stylesheet" href="jquery.mobile/jquery.mobile-1.2.0.min.css" />         
+    </head>
+    <body>
+        <section id="page" data-role="page">
+
+            <header data-role="header"  data-theme="a">
+
+                <img class="logo" src="img/logo.png" titlo="Banco de puntos">            
+                <h1>Banco de Puntos</h1>
+            </header>
+            <article data-role="content">
+                <h2>Catalogo de productos disponibles para canges</h2>
+
+                <ul data-role="listview" data-split-icon="gear" data-split-theme="d" data-inset="true" data-filter="true">
+                    <li><a href="#">
+                            <img src="apple.png">
+                            <h2>Computadoras</h2>
+                            <p>MacBook Pro <br> 200 pts</p></a>
+                        <a id="item1" href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Ver detalles</a>
+                    </li>
+                    <li><a href="#">
+                            <img src="phone_lumia920.png">
+                            <h2>Celulares</h2>
+                            <p>Nokia <br> 70 pts </p></a>
+                        <a id="item2" href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Ver detalles</a>
+                    </li>
+                    <li><a href="#">
+                            <img src="phone_onex.png">
+                            <h2>Celulares</h2>
+                            <p>Samsung <br> 80 pts </p></a>
+                        <a id="item3" href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Ver detalles</a>
+                    </li>
+                </ul>
+                <div data-role="popup" id="purchase" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+                </div>
+            </article><!-- /content -->
+
+            <footer data-role="footer">
+                <h1>Footer</h1>
+            </footer><!-- /footer -->
+        </section><!-- /page -->
+    </body>
+</html>
