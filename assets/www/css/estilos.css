@@ -1,0 +1,92 @@
+h2 {
+  text-align: center;
+  color: #fff;
+}
+header {
+  background: #232323;
+  border-bottom: solid 4px #707070;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+header img {
+  width: 100%;
+}
+header h1 {
+  font-size: 20px;
+  font-weight: normal;
+  text-align: center;
+}
+header .logo,
+header .titulo_nav {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
+header .logo {
+  height: 3.5em;
+  padding: 0.4em;
+  width: 3.5em;
+}
+header .titulo_nav {
+  width: 79%;
+}
+header nav a {
+  text-decoration: none;
+  border: solid 0.1em #000;
+  height: 50%;
+  padding: 0;
+  margin: 0;
+  width: 33%;
+}
+.cuerpo {
+  margin-top: 50px;
+}
+.logo_index img {
+  width: 100%;
+}
+.logo {
+  width: 30%;
+  height: 30%;
+  display: inline-block;
+  margin-left: 35%;
+}
+.index {
+  color: #fff;
+  font-size: 16px;
+  color: #fff;
+}
+.index h2 {
+  text-align: center;
+}
+.logo_index .logo {
+  display: inline-block;
+  margin-left: 50%;
+  width: 100%;
+}
+.login {
+  background: #dee0e4;
+  border: solid 2px;
+  color: #150f11;
+  display: inline-block;
+  height: 50%;
+  margin-left: 13%;
+  padding: 0.5em;
+  width: 70%;
+  border-radius: 10px;
+}
+#recordarContrasenna,
+#registrar {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+#recordarContrasenna a,
+#registrar a {
+  text-decoration: none;
+  color: #fff;
+  font-style: normal;
+  font-family: "Arial";
+  font-size: 0.8em;
+}
