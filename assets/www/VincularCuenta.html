@@ -1,0 +1,91 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"  href="jquery.mobile/jquery.mobile-1.3.0.css">
+    <link rel="shortcut icon" href="favicon.ico">    
+    <script src="jquery.mobile/jquery-1.7.1.js"></script>    
+    <script src="jquery.mobile/jquery.mobile-1.3.0.js"></script>
+     <script src="js/catalogo.js"></script>
+<script type="text/javascript">
+/*window.onload = function() {
+		  var info = document.getElementById("informacion");
+	  var enlaces = document.getElementsByTagName("li");
+  info.innerHTML = "Numero de enlaces = "+enlaces.length;
+}*/
+$(document).ready(function() {
+$("#empresas").submit(function () { // empieza la funcion para validar el mail
+		if($("#email").val().indexOf('@', 0) == -1 || $("#email").val().indexOf('.', 0) == -1) {
+			alert("La dirección e-mail parece incorrecta");
+			return false;
+		}
+		var count =$("input:checked").length;
+		var valores='';
+		 for(i=0;i<count;i++){
+                valores += ' '+$("input:checked")[i].value + ',';
+            }
+			alert (valores);
+		return false;
+	});
+});
+</script>
+</head> 
+<body> 
+<form name="empresas" id="empresas" method="post">
+<div data-role="page" id="page"> <!----Empieza el div principal!--->
+   <header data-role="header"  data-theme="a">
+       <img class="logo" src="img/logo.png" titlo="Banco de puntos">  
+         <h1>Banco de Puntos</h1>
+    </header>
+   <div data-role="collapsible-set"> <!----Empieza el div acordeon!--->
+	<div data-role="collapsible" data-collapsed="false"> <!----Empieza el div acordeon 1!---> 
+    <h2> Vincular Cuentas </h2>
+      <ul data-role="listview" data-filter="true">  <!----Empieza el list view!---> 
+				<li class="ui-bar-c">  <!----Empieza el  primer elementos de la lista---> 
+       			<label style="border-top-width: 0px;margin-top: 0px;border-bottom-width: 0px;margin-bottom: 0px;border-left-width: 0px;border-right-width: 0px;" data-corners="false" >
+                <input type="checkbox" name="Rey" id="Rey" value="Rey" data-theme="c"/>                    
+                <label for="checkbox-2b" style="border-top-width: 0px;margin-top: 0px;border-bottom-width: 0px;margin-bottom: 0px;border-left-width: 0px;border-right-width: 0px;">
+                <label  style="padding:10px 0px 0px 10px;"> 
+                 <h2>SuperMercados El Rey</h2>
+                </label> 
+                </label> 
+                </label>
+                </li> <!----termina el  primer elementos de la lista---> 
+				<li class="ui-bar-c">  <!----Empieza el  segunda elementos de la lista---> 
+       			<label style="border-top-width: 0px;margin-top: 0px;border-bottom-width: 0px;margin-bottom: 0px;border-left-width: 0px;border-right-width: 0px;" data-corners="false" >
+                <input type="checkbox" name="Novey" id="Novey" value="Novey" data-theme="c"/>                    
+                <label for="checkbox-2b" style="border-top-width: 0px;margin-top: 0px;border-bottom-width: 0px;margin-bottom: 0px;border-left-width: 0px;border-right-width: 0px;">
+                <label  style="padding:10px 0px 0px 10px;"> 
+                 <h2>Novey</h2>
+                </label> 
+                </label> 
+                </label>
+                </li> <!----termina el  segunda elementos de la lista---> 
+                <li class="ui-bar-c">  <!----Empieza el  tercer elementos de la lista---> 
+       			<label style="border-top-width: 0px;margin-top: 0px;border-bottom-width: 0px;margin-bottom: 0px;border-left-width: 0px;border-right-width: 0px;" data-corners="false" >
+                <input type="checkbox" name="DoitCenter" id="DoitCenter" value="DoitCenter" data-theme="c"/>                    
+                <label for="checkbox-2b" style="border-top-width: 0px;margin-top: 0px;border-bottom-width: 0px;margin-bottom: 0px;border-left-width: 0px;border-right-width: 0px;">
+                <label  style="padding:10px 0px 0px 10px;"> 
+                 <h2>Doit Center</h2>
+                </label> 
+                </label> 
+                </label>
+                </li> <!----termina el  terccer elementos de la lista---> 
+      </ul> <!----termina el list view!---> 	
+    </div> <!-------Termina ell div del collapsible!--->
+	</div> <!----termina el div acordeon 1!--->
+    	<div data-role="collapsible"> <!----empieza el div acordeon 2!--->
+	<h3>Veincular Empresa</h3>
+    <div data-role="controlgroup">  <!----empieza del input de email!--->
+	  <label for="textinput">Introduzca su Email:</label>
+	  <input type="text" name="email" id="email" value="" required placeholder="Nombre@ejemplo.com" />
+       <input type="submit" value="Enviar" data-inline="true" id="submit" />
+    </div> <!----termina del input de email!--->
+   
+   
+	</div> <!----termina el div acordeon 2!--->
+</div><!----termina el div principal!--->
+</form>
+</body>
+</html>>>
