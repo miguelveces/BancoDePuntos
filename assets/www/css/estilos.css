@@ -1,3 +1,69 @@
+@font-face {
+  font-family: 'bdpuntos';
+  src: url("fonts/bdpuntos.eot");
+  src: url("fonts/bdpuntos.eot?#iefix") format('embedded-opentype'), url("fonts/bdpuntos.woff") format('woff'), url("fonts/bdpuntos.ttf") format('truetype'), url("fonts/bdpuntos.svg#bdpuntos") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icono]:before {
+  font-family: 'bdpuntos';
+  content: attr(data-icono);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icono-film,
+.icono-play,
+.icono-pause,
+.icono-play-2,
+.icono-cart,
+.icono-bolt,
+.icono-wand,
+.icono-contract,
+.icono-barcode,
+.icono-expand {
+  font-family: 'bdpuntos';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icono-film:before {
+  content: "\e000";
+}
+.icono-play:before {
+  content: "\e001";
+}
+.icono-pause:before {
+  content: "\e002";
+}
+.icono-play-2:before {
+  content: "\e003";
+}
+.icono-cart:before {
+  content: "\e004";
+}
+.icono-bolt:before {
+  content: "\e005";
+}
+.icono-wand:before {
+  content: "\e006";
+}
+.icono-contract:before {
+  content: "\e007";
+}
+.icono-barcode:before {
+  content: "\e008";
+}
+.icono-expand:before {
+  content: "\e009";
+}
 h2 {
   text-align: center;
   color: #fff;
@@ -6,6 +72,7 @@ header {
   background: #232323;
   border-bottom: solid 4px #707070;
   width: 100%;
+  height: 90px;
   position: fixed;
   z-index: 1;
 }
@@ -17,7 +84,12 @@ header h1 {
   font-weight: normal;
   text-align: center;
 }
-header .logo,
+header .logo {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+}
 header .titulo_nav {
   display: inline-block;
   margin: 0;
@@ -27,29 +99,41 @@ header .titulo_nav {
 header .logo {
   height: 3.5em;
   padding: 0.4em;
-  width: 3.5em;
+  width: 5em;
 }
 header .titulo_nav {
   width: 79%;
 }
+header nav {
+  float: center;
+}
 header nav a {
+  font-size: 1.8em;
+  color: #fff;
+  text-align: center;
   text-decoration: none;
-  border: solid 0.1em #000;
-  height: 50%;
-  padding: 0;
-  margin: 0;
-  width: 33%;
+  padding: 0.1em;
+  margin-left: 0.6em;
+  transition: all 1s ease;
+}
+header nav a .cat {
+  color: #f00;
+}
+header nav a:hover {
+  font-size: 2em;
 }
 .cuerpo {
-  margin-top: 50px;
+  margin-top: 6em;
+  z-index: -1;
 }
 .logo_index img {
   width: 100%;
 }
 .logo {
   width: 30%;
-  height: 30%;
+  height: 25%;
   display: inline-block;
+  padding: 0.5em;
   margin-left: 35%;
 }
 .index {
