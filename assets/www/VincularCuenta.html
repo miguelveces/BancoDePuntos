@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet"  href="jquery.mobile/jquery.mobile-1.3.0.css">
     <link rel="stylesheet"  href="css/themes/bancodepuntos.min.css">
+    <link rel="stylesheet"  href="css/estilos.css">     
     <link rel="shortcut icon" href="favicon.ico">    
     <script src="jquery.mobile/jquery-1.7.1.js"></script>    
     <script src="jquery.mobile/jquery.mobile-1.3.0.js"></script>
@@ -36,29 +37,40 @@ $("#empresas").submit(function () { // empieza la funcion para validar el mail
 <body> 
 <form name="empresas" id="empresas" method="post">
 <div data-role="page" id="page"> <!----Empieza el div principal!--->
-   <header data-role="header"  data-theme="a">
-       <img class="logo" src="img/logo.png" titlo="Banco de puntos">  
-         <h1>Banco de Puntos</h1>
-    </header>
+             <header>
+                <figure class="logo">
+                    <img src="img/logo.png"/>
+                </figure>
+                <div class="titulo_nav">
+                    <h1>Banco de Puntos</h1>
+                    <nav>                        
+                        <a href="principal.html" aria-hidden="true" data-icono="&#xe004;" class="car"></a>
+                        <a href="VincularCuenta.html"aria-hidden="true" data-icono="&#xe007;"></a>
+                        <a href="VincularCuenta.html" aria-hidden="true" data-icono="&#xe006;"></a>   
+                        <a href="principal.html" aria-hidden="true" data-icono="&#xe004;" class="car"></a>                                                               
+                    </nav>
+                </div>                                
+            </header>
+<article data-role="content" class="cuerpo">   
    <div data-role="collapsible-set"> <!----Empieza el div acordeon!--->
 	<div data-role="collapsible" data-collapsed="false"> <!----Empieza el div acordeon 1!---> 
     <h2> Vincular Cuentas </h2>
       <ul data-role="listview" data-filter="true">  <!----Empieza el list view!---> 
 				<li class="ui-bar-c">  <!----Empieza el  primer elementos de la lista---> 
-       			<label style="border-top-width: 0px;margin-top: 0px;border-bottom-width: 0px;margin-bottom: 0px;border-left-width: 0px;border-right-width: 0px;" data-corners="false" >
-                <input type="checkbox" name="Rey" id="Rey" value="Rey" data-theme="c"/>                    
+       			<label style="border-top-width: 0px;margin-top: 0px;border-bottom-width: 0px;margin-bottom: 0px; data-corners="false" >
+                <input type="checkbox" name="Rey" id="Rey" value="Rey" data-theme="b"/>                    
                 <label for="checkbox-2b" style="border-top-width: 0px;margin-top: 0px;border-bottom-width: 0px;margin-bottom: 0px;border-left-width: 0px;border-right-width: 0px;">
                  <h2>SuperMercados El Rey</h2>
                 </li> <!----termina el  primer elementos de la lista---> 
 				<li class="ui-bar-c">  <!----Empieza el  segunda elementos de la lista---> 
        			<label style="border-top-width: 0px;margin-top: 0px;border-bottom-width: 0px;margin-bottom: 0px;border-left-width: 0px;border-right-width: 0px;" data-corners="false" >
-                <input type="checkbox" name="Novey" id="Novey" value="Novey" data-theme="c"/>                    
+                <input type="checkbox" name="Novey" id="Novey" value="Novey" data-theme="b"/>                    
                 <label for="checkbox-2b" style="border-top-width: 0px;margin-top: 0px;border-bottom-width: 0px;margin-bottom: 0px;border-left-width: 0px;border-right-width: 0px;">
                  <h2>Novey</h2>
                 </li> <!----termina el  segunda elementos de la lista---> 
                 <li class="ui-bar-c">  <!----Empieza el  tercer elementos de la lista---> 
        			<label style="border-top-width: 0px;margin-top: 0px;border-bottom-width: 0px;margin-bottom: 0px;border-left-width: 0px;border-right-width: 0px;" data-corners="false" >
-                <input type="checkbox" name="DoitCenter" id="DoitCenter" value="DoitCenter" data-theme="c"/>                    
+                <input type="checkbox" name="DoitCenter" id="DoitCenter" value="DoitCenter" data-theme="b"/>                    
                 <label for="checkbox-2b" style="border-top-width: 0px;margin-top: 0px;border-bottom-width: 0px;margin-bottom: 0px;border-left-width: 0px;border-right-width: 0px;">
                  <h2>Doit Center</h2>
                 </li> <!----termina el  terccer elementos de la lista---> 
@@ -69,13 +81,14 @@ $("#empresas").submit(function () { // empieza la funcion para validar el mail
 	<h3>Veincular Empresa</h3>
     <div data-role="controlgroup">  <!----empieza del input de email!--->
 	  <label for="textinput">Introduzca su Email:</label>
-	  <input type="text" name="email" id="email" value="" required placeholder="Nombre@ejemplo.com" />
+	  <input type="text" name="email" id="email" value="" required placeholder="Nombre@ejemplo.com" data-theme="b" />
        <input type="submit" value="Enviar" data-inline="true" id="submit" />
     </div> <!----termina del input de email!--->
    
    
 	</div> <!----termina el div acordeon 2!--->
 </div><!----termina el div principal!--->
+ </article>   
 </form>
 </body>
 </html>>>
