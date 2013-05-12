@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <meta charset="utf-8">	
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"  href="jquery.mobile/jquery.mobile-1.3.0.css">        
+        <script src="jquery.mobile/jquery-1.7.1.js"></script>    
+        <script src="jquery.mobile/jquery.mobile-1.3.0.js"></script>     
+        <link rel="stylesheet"  href="css/estilos.css">
+
+        <script type="text/javascript" src="cordova-2.5.0.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script src="js/catalogo.js"></script>
+        <link rel="stylesheet" href="css/themes/bancodepuntos.min.css" />
+    </head>
+    <body>
+        <section id="page" data-role="page" class="index" data-theme="c" >  
+            
+            <figure id="logo_index">
+                <img class="logo" src="img/logogrande.png" alt="banco de puntos "/>                   
+            </figure>
+            
+            <h2>Banco de Puntos</h2>                                        
+            <article data-role="content">                                
+                <div class="login">
+                    <label for="usuario">Usuario:</label>
+                    <input data-theme="b" type="text" name="usuario" id="usuario" value=""  placeholder="Escribir usuario" />
+                    <label for="passwordinput">contraseña:</label>
+                    <input data-theme="b" type="password" name="passwordinput" id="passwordinput" value="" placeholder="Escribir contraseña" />
+                    </br>   
+                    <a data-theme="a" href="principal.html" data-role="button">Enviar</a>                                                                   
+                </div>
+                </br>
+                <p id="recordarContrasenna"><a  href="#">¿No puedes Acceder a tu cuenta?</a></p>
+                </br>
+                <p id="registrar"><a  href="RegistroDeUsuario.html">Registrarte en el Banco de Puntos</a> </p>           
+            </article>              
+        </section>
+
+
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
