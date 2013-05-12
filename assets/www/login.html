@@ -12,14 +12,16 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script src="js/catalogo.js"></script>
         <link rel="stylesheet" href="css/themes/bancodepuntos.min.css" />
+        <script src="js/servicio-clientes.js"></script>
     </head>
+
     <body>
         <section id="page" data-role="page" class="index" data-theme="c" >  
-            
+
             <figure id="logo_index">
                 <img class="logo" src="img/logogrande.png" alt="banco de puntos "/>                   
             </figure>
-            
+
             <h2>Banco de Puntos</h2>                                        
             <article data-role="content">                                
                 <div class="login">
@@ -27,19 +29,18 @@
                     <input data-theme="b" type="text" name="usuario" id="usuario" value=""  placeholder="Escribir usuario" />
                     <label for="passwordinput">contraseña:</label>
                     <input data-theme="b" type="password" name="passwordinput" id="passwordinput" value="" placeholder="Escribir contraseña" />
-                    </br>   
-                    <a data-theme="a" href="principal.html" data-role="button">Enviar</a>                                                                   
+                    <br>   
+                    <input id="LoginButton" type="button" value="Enviar" onclick="LoginButton_onclick();" data-theme="a"/>
                 </div>
-                </br>
+                <br>
                 <p id="recordarContrasenna"><a  href="#">¿No puedes Acceder a tu cuenta?</a></p>
-                </br>
+                <br>
                 <p id="registrar"><a  href="RegistroDeUsuario.html">Registrarte en el Banco de Puntos</a> </p>           
             </article>              
         </section>
 
-
         <script type="text/javascript">
-            app.initialize();
+                        app.initialize();
         </script>
     </body>
 </html>
