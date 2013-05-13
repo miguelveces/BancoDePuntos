@@ -9,7 +9,7 @@ function LoginButton_onclick() {
         contentType: "application/json; charset=utf-8",
         dataType: "json",
 //        url: "http://190.72.192.18/webservicedemo/service.asmx/HelloWorld",
-        url: "http://bancoservicios.somee.com/BancoDePuntos/Business_Services/App_Services/WSCuenta.asmx/HelloWorld",
+        url: "http://bancoservicios.somee.com/BancoDePuntos/Business_Services/App_Services/WSCuenta.asmx/Login",
         data: '{}',
         success: function(msg) {
             jsonArray = $.parseJSON(msg.d);
