@@ -15,12 +15,11 @@ function LoginButton_onclick() {
             jsonArray = $.parseJSON(msg.d);
             var user = document.getElementById('usuarioinput').value;
             var pass = document.getElementById('passwordinput').value;
-            alert(user + "-" + pass);
+
             for (i = 0; i < jsonArray.length; i++)
             {
                 if (user == jsonArray[i].Nombre && pass == jsonArray[i].Numero) {
-                    alert("si")
-                    window.location = './principal.html';
+                    window.location = 'principal.html'; 
                 }
             }
         },
