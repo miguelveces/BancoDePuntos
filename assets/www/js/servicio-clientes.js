@@ -13,13 +13,16 @@ function LoginButton_onclick() {
         data: '{}',
         success: function(msg) {
             jsonArray = $.parseJSON(msg.d);
-            var $ul = $('<ul id="details">');
+            var user = document.getElementById('usuarioinput').value;
+            var pass = document.getElementById('passwordinput').value;
+            alert(user + "-" + pass);
             for (i = 0; i < jsonArray.length; i++)
             {
-                $("#details").append('<li id="' + i + '" name="head" >' + jsonArray[i].Nombre + '</li>');
+                if (user == jsonArray[i].Nombre && pass == jsonArray[i].Numero) {
+                    alert("si")
+                    window.location = './principal.html';
+                }
             }
-//            $('#details').listview('refresh');
-            alert("redirecionar");
         },
         error: function(msg) {
             alert("Error" + msg);
