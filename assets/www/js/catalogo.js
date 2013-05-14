@@ -1,6 +1,11 @@
 
 // ************************************************Java script que maneja la pagina de  vincular cuanta y catalogo****************************************************************
 $(function() {
+         obtener_get();
+        var puntos = $.get("ptss");      
+        //$('#punto').html('');
+        $("#puntos").append(puntos);
+
     $('#vincular').on('pageshow', function() {
 
         $("#submit").on("click", function() { // empieza la funcion para validar el mail
@@ -31,26 +36,9 @@ $(function() {
         //termina la parte para crear la lista
     });
 
-    $('#catalogo').on('pageshow', function() {
-
-        (function($) {
-            $.get = function(key) {
-                key = key.replace(/[\[]/, '\\[');
-                key = key.replace(/[\]]/, '\\]');
-                var pattern = "[\\?&]" + key + "=([^&#]*)";
-                var regex = new RegExp(pattern);
-                var url = unescape(window.location.href);
-                var results = regex.exec(url);
-                if (results === null) {
-                    return null;
-                } else {
-                    return results[1];
-                }
-            }
-        })(jQuery);
-
-        var puntos = $.get("ptss");
-        console.log(puntos);
+    $('#catalogo').on('pageshow', function() {      
+        obtener_get();
+        var puntos = $.get("ptss");      
         //$('#punto').html('');
         $("#punto").append(puntos);
 
@@ -76,5 +64,24 @@ $(function() {
         //$('#purchase').listview('refresh');
 
     });
+
+
+function obtener_get()
+{
+  $.get = function(key) {
+                key = key.replace(/[\[]/, '\\[');
+                key = key.replace(/[\]]/, '\\]');
+                var pattern = "[\\?&]" + key + "=([^&#]*)";
+                var regex = new RegExp(pattern);
+                var url = unescape(window.location.href);
+                var results = regex.exec(url);
+                if (results === null) {
+                    return null;
+                } else {
+                    return results[1];
+                }
+            }
+}
+
 
 });
