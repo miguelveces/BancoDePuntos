@@ -12,18 +12,13 @@
             {
 
                 var costoPuntos = document.getElementById('selectCostoPTS');
-                var puntos = document.getElementById('selectCostoPTS').value;
+                var puntos = document.getElementById('puntosDisp').value;
 
+            }
 
+            function  valorMax(){
 
-                var seleccion = document.getElementById('select1');
-
-                document.getElementById('text2').value = seleccion.options[seleccion.selectedIndex].text;
-                document.getElementById('text3').value = seleccion.options[seleccion.selectedIndex].value;
-
-
-
-
+              var puntos = document.getElementById('puntosDisp').value;
 
             }
         </script>    
@@ -63,7 +58,7 @@
                  id = "chkHam"
                  value = "ham" />
              <label for = "chkHam">NOVEY</label></td>
-        <td><div align="CENTER"><label id="puntosDisp" value="300"><B>300</B></label></div></td>
+        <td><div align="CENTER"><label><B>300</B></label></div></td>
         <td>
     <input name="slider-1" id="selectCostoPTS" min="0" max="100" value="50" type="range"></td>
       </tr>
@@ -73,9 +68,9 @@
                  id = "rey"
                  value = "rey" />
              <label for = "rey">REY</label></td>
-        <td width="150"><div align="CENTER"><label value="rango" id="range"><B>500</B></label></div></td>
+        <td width="150"><div align="CENTER"><label><B>500</B></label></div></td>
         <td>
-    <input name="slider-1" id="slider-1" min="0" max="100" value="50" type="range"></td>
+    <input name="slider-1" id="slider-Rey" min="0" max="100" value="50" type="range"></td>
       </tr>
       <tr>
         <th>3</th>
@@ -86,7 +81,7 @@
       </td>
         <td ><div align="CENTER"><label><B>200</B></label></div></td>
         <td>
-    <input name="slider-1" id="slider-1" min="0" max="300" value="50" type="range">
+    <input name="slider-1" id="slider-Machetazo" min="0" max="300" value="50" type="range">
 </td>
       </tr>
       <tr>
@@ -97,7 +92,7 @@
              <label for = "xtra">XTRA</label>
         </td>
         <td><div align="CENTER"><label><B>350</B></label></div></td>
-        <td> <input name="slider-1" id="slider-1" min="0" max="100" value="50" type="range"></td>
+        <td> <input name="slider-1" id="slider-Xtra" min="0" max="100" value="50" type="range"></td>
       </tr>
       <tr>
         <th align="CENTER">5</th>
@@ -106,7 +101,7 @@
                  value = "99" />
              <label for = "99">Super 99</label></td>
         <td><div align="CENTER"><label><B>400</B></label></div></td>
-        <td><input name="slider-1" id="slider-1" min="0" max="100" value="50" type="range"></td>
+        <td><input name="slider-1" id="slider-99" min="0" max="100" value="50" type="range"></td>
 
       </tr>
 
@@ -124,8 +119,8 @@
 
   <label for="flip1">Seleccionar una de dos opciones</label>
 <select name="slider" id="flip1" data-role="slider">
-    <option><a   href="" value="off">Off</a></option>
-    <option><a  href="" value="on">ON</a></option>
+    <option value="off">Off</option>
+    <option  value="on">ON</option>
 </select> 
 
  <fieldset class="ui-grid-a">
