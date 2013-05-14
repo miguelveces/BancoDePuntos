@@ -11,45 +11,34 @@
     <body>
         <section id="page" data-role="page">
 
-            <header>
-
-                <img class="logo" src="img/logo.png" titlo="Banco de puntos">            
-                <h1>Banco de Puntos</h1>
-            </header>
+             <header> <!--empieza el header encabezado!-->
+               <figure class="logo">
+                    <img src="img/logo.png"/>
+                </figure>
+                <div class="titulo_nav">
+                    <h1>Banco de Puntos</h1>
+                    <nav>                        
+                        <a href="principal.html" aria-hidden="true" data-icono="&#xe004;" class="car"></a>
+                        <a href="VincularCuenta.html"aria-hidden="true" data-icono="&#xe007;"></a>
+                        <a href="VincularCuenta.html" aria-hidden="true" data-icono="&#xe006;"></a>   
+                        <a href="principal.html" aria-hidden="true" data-icono="&#xe004;" class="car"></a>                                            
+                    </nav>
+                </div>                                
+      </header>
             <article data-role="content" class="cuerpo">
-                <h2>Catalogo de productos disponibles para canges</h2>
-               
-                
-                <div data-role="collapsible" data-theme="b" data-content-theme="c">
-    <h2>Choose a car model...</h2>
-     <ul data-role="listview" data-autodividers="true" data-filter="true" data-inset="true">
-                        <li><a href="#">
-                                <img src="img/apple.png">
-                                <h2>Computadoras</h2>
-                                <p>MacBook Pro <br> 200 pts</p></a>
-                            <a id="item1" href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Ver detalles</a>
-                        </li>
-                        <li><a href="#">
-                                <img src="img/phone_lumia920.png">
-                                <h2>Celulares</h2>
-                                <p>Nokia <br> 70 pts </p></a>
-                            <a id="item2" href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Ver detalles</a>
-                        </li>
-                        <li><a href="#">
-                                <img src="img/phone_onex.png">
-                                <h2>Celulares</h2>
-                                <p>Samsung <br> 80 pts </p></a>
-                            <a id="item3" href="#purchase" data-rel="popup" data-position-to="window" data-transition="pop">Ver detalles</a>
-                        </li>
-                    </ul>
-</div>
-                <div data-role="popup" id="purchase" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;">
+                <h2>Catalogo de productos disponibles para canjes</h2>                           
+                <!-- <div data-role="collapsible" data-theme="b" data-content-theme="c">
+                 <!-- <h2 id="catalogo">Ver Productos Disponibles</h2> -->
+                <div data-role="content" id="cntent" > 
+                </br>
+                 <ul  data-role="listview"  data-filter="true" data-inset="true" id="productos" data-theme="b">
+                 
+                </ul> 
+                </div>                
+             <!-- </div> -->
+                <div id="ventana_emergente">
                 </div>
-            </article><!-- /content -->
-
-            <footer data-role="footer">
-                <h1>Footer</h1>
-            </footer><!-- /footer -->
+            </article><!-- /content -->    
         </section><!-- /page -->
          <script type="text/javascript" src="cordova-2.5.0.js"></script>
         <script type="text/javascript" src="js/index.js"></script>

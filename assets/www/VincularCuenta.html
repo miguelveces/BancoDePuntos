@@ -23,10 +23,9 @@ $("#empresas").submit(function () { // empieza la funcion para validar el mail
 		return false;
 	}); // termina la funcion para validar el mail
 	//empieza la parte para crear la lista
-        var array = '[{"name": "Super Mercados El Rey", "value": "Punto de Oros"},{"name": "Super Mercados Veces", "value": "banco depuntos"},{"name": "Novey", "value": "Novey"},{"name": "Doit Center", "value": "Doit Center"}]';  
+        var array = '[{"name": "Super Mercados El Rey", "value": "Punto de Oros"},{"name": "Novey", "value": "Novey"},{"name": "Doit Center", "value": "Doit Center"}]';  
          $("#content").append('<ul id=listaempresa data-role="listview" class="ui-bar-c" data-theme="d" data-filter="true">');
 		 $("#content").append('<fieldset id="cbFieldSet" data-role="controlgroup">');
-     //Json que practicamente es lo que deberia devolver el servicio se creo con el fin de simular el servicio
 		 var bancoempresas = JSON.parse(array);
          var length = bancoempresas.length;
          for(var i=0;i<length;i++){
@@ -54,7 +53,7 @@ $("#empresas").submit(function () { // empieza la funcion para validar el mail
                         <a href="principal.html" aria-hidden="true" data-icono="&#xe004;" class="car"></a>                                            
                     </nav>
                 </div>                                
-      </header> <!--termina el header encabezado!-->
+            </header> <!--termina el header encabezado!-->
  <article data-role="content" class="cuerpo"> <!--Empieza el formato Article!-->
   <div data-role="collapsible-set"> <!--Empieza el div acordeon!-->
   <div data-role="collapsible" data-collapsed="false" data-theme="a"> <!--Empieza el div acordeon 1!--> 
@@ -75,8 +74,7 @@ $("#empresas").submit(function () { // empieza la funcion para validar el mail
 </section><!--termina el Section!-->
  </form> 
 <script type="text/javascript" src="cordova-2.5.0.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script src="js/catalogo.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>        
         <link rel="stylesheet" href="css/themes/bancodepuntos.min.css" />
 </body>
 </html>
