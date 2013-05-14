@@ -6,41 +6,68 @@
         <link rel="stylesheet"  href="jquery.mobile/jquery.mobile-1.3.0.css">        
         <script src="jquery.mobile/jquery-1.7.1.js"></script>    
         <script src="jquery.mobile/jquery.mobile-1.3.0.js"></script>     
-        <link rel="stylesheet"  href="css/estilos.css">     
+        <link rel="stylesheet"  href="css/estilos.css">  
+        
+        <script language="javascript" type="text/javascript">
+function randomString() {
+	var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz";
+	var string_length = 15;
+	var randomstring = '';
+	for (var i=0; i<string_length; i++) {
+		var rnum = Math.floor(Math.random() * chars.length);
+		randomstring += chars.substring(rnum,rnum+1);
+	}
+  //aqui se gerera haciendo click en el boton
+	document.randform.randomfield.value = randomstring;
+
+  //aqui quisiera que se genere el codigo ramdon apenas se cargue la pag
+ // window.onload.randform.randomfield.value = randomstring;
+}
+</script>
+        
     </head>
-    <body>
-             <header>
-                <figure class="logo">
+    <body onload="randomString()">
+             <header> <!--empieza el header encabezado!-->
+               <figure class="logo">
                     <img src="img/logo.png"/>
                 </figure>
                 <div class="titulo_nav">
                     <h1>Banco de Puntos</h1>
                     <nav>                        
-                        <a href="principal.html">Cangear</a>
-                        <a href="VincularCuenta.html">Vincular</a>
-                        <a href="#">Cangear</a>                                                
+                        <a href="#catalogo" data-href="#catalogo" aria-hidden="true" data-icono="&#xe004;" class="car"></a>
+                        <a href="#vincular" data-href="#vincular" aria-hidden="true" data-icono="&#xe007;"></a>
+                        <a href="#" data-href="#catalogo" aria-hidden="true" data-icono="&#xe006;"></a>   
+                        <a href="#" id="punto"></a>                                               
                     </nav>
                 </div>                                
             </header>
 
-
+<form name="randform">
 <article data-role="content" class="cuerpo">    
 
-<div align="CENTER">
+   <div align="center"><label>CERTIFICADO DE CAJE DEL PRODUCTO</label></div> 
 
-    <img src="img/logofdsystems.png"/>
+<div align="CENTER">
+    <!-- PUEDE LLAMAR EL PRODUCTO POR JS -->
+    <img src="img/apple.png"/>
 
 </div>
+
+ <div align="center"><label>FELICIDADES</label></div> 
+  <div align="center"><label>GRACIAS POR PREFERIR SU BANCO DE PUNTOS</label></div> 
+
+   <div align="center"><label>CON EL CODIGO GENERADO PUEDE IR A CANJEAR SU PRODUCTO</label></div> 
+   
+<div align="center"><input type="label" align="CENTER" name="randomfield" value="" ></div> 
+    
+<input type="button" value="CREAR SU CODIGO" onClick="randomString();">&nbsp;
 
 
 
 
   </article><!-- /content -->
-
-
-
-
-
+  
+  </form>
 
             <script type="text/javascript" src="cordova-2.4.0.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
