@@ -15,11 +15,13 @@ function LoginButton_onclick() {
             jsonArray = $.parseJSON(msg.d);
             var user = document.getElementById('usuarioinput').value;
             var pass = document.getElementById('passwordinput').value;
+            
 
             for (i = 0; i < jsonArray.length; i++)
             {
+                var pts = jsonArray[i].Puntos;
                 if (user == jsonArray[i].Nombre && pass == jsonArray[i].Numero) {
-                    window.location = 'principal.html'; 
+                    window.location = 'principal.html?ptss=' + pts; 
                 }
             }
         },
