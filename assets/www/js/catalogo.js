@@ -2,24 +2,25 @@ var x;
 x=$(document);
 x.ready(inicializarEventos);
   function inicializarEventos()
-  {
-  	var item1, item2, item3;
-     item1=$("#item1");
-     item2=$("#item2");
-     item3=$("#item3");     
-    item1.click(tema_1);
-    item2.click(tema_2);
-    item3.click(tema_3);    
+  {  
+   var productos_categoria = '[{"categoria": "Computadoras", "descripcion": "MacBook Pro", "costo": "200 pts", "id": "1", "imagen": "img/apple.png"},{"categoria": "Celulares", "descripcion": "Nokia", "costo": "70 pts", "id": "2", "imagen": "img/phone_lumia920.png"},{"categoria": "Celulares", "descripcion": "Samsung", "costo": "80 pts", "id": "3", "imagen": "img/phone_onex.png"},{"categoria": "Accesorios", "descripcion": "Reloj Digital", "costo": "300 pts", "id": "4", "imagen": "img/reloj.jpg"}]';  
+        
+        $('[data-role=listview]').html('');     
+         var productos = JSON.parse(productos_categoria);
+         var length = productos.length;
+         //console.log(length);         
+         for(var i=0;i<length;i++){
+            $("#productos").append('<li> <a href="#"> <img src="'+ productos[i].imagen +'"> <h2>'+ productos[i].categoria +'</h2> <p>'+ productos[i].descripcion +'<br>'+ productos[i].costo +'</p></a> <a id="item1" href="#purchase'+productos[i].id+'" data-rel="popup" data-position-to="window" data-transition="pop">Ver detalles</a> </li>');           
+           }
+           $("#productos").trigger("create");           
+      $('#productos').listview('refresh');  
+      for(var i=0;i<length;i++){
+       $("#ventana_emergente").append('<div data-role="popup" id="purchase'+productos[i].id+'" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;"> <h3>Desea Canjear sus pontos por este producto?</h3>  <p>'+ productos[i].categoria +': '+ productos[i].descripcion +' </p> <a href="canjear.html" data-role="button" data-rel="back" data-theme="b" data-icon="check" data-inline="true" data-mini="true">Canjear '+ productos[i].costo +'</a> <a href="catalogo.html" data-role="button" data-rel="back" data-inline="true" data-mini="true">Cancel</a> </div>'); 
 
+      }
+  
+ $("#ventana_emergente").trigger("create");
+ $("#ventana_emergente").trigger("refresh");
+ //$('#purchase').listview('refresh');
   }
-function tema_1(){
-document.getElementById("purchase").innerHTML=" <h3>Desea Cangear sus pontos por este producto</h3>  <p>Computadoras: MacBook Pro </p> <a href=\"cangear.html\" data-role=\"button\" data-rel=\"back\" data-theme=\"b\" data-icon=\"check\" data-inline=\"true\" data-mini=\"true\">Cangear 200 pts</a> <a href=\"catalogo.html\" data-role=\"button\" data-rel=\"back\" data-inline=\"true\" data-mini=\"true\">Cancel</a>"; 
-}
-function tema_2(){
-document.getElementById("purchase").innerHTML=" <h3>Desea Cangear sus pontos por este producto</h3>  <p>Celulares: Nokia </p> <a href=\"cangear.html\" data-role=\"button\" data-rel=\"back\" data-theme=\"b\" data-icon=\"check\" data-inline=\"true\" data-mini=\"true\">Cangear 70 pts</a> <a href=\"catalogo.html\" data-role=\"button\" data-rel=\"back\" data-inline=\"true\" data-mini=\"true\">Cancel</a>";
 
-}
-function tema_3(){
-document.getElementById("purchase").innerHTML=" <h3>Desea Cangear sus pontos por este producto</h3>  <p>Celulares: Samsung </p> <a href=\"cangear.html\" data-role=\"button\" data-rel=\"back\" data-theme=\"b\" data-icon=\"check\" data-inline=\"true\" data-mini=\"true\">Cangear 80 pts</a> <a href=\"catalogo.html\" data-role=\"button\" data-rel=\"back\" data-inline=\"true\" data-mini=\"true\">Cancel</a>";
-
-}
