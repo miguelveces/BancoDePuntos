@@ -17,13 +17,16 @@ function randomString() {
 		var rnum = Math.floor(Math.random() * chars.length);
 		randomstring += chars.substring(rnum,rnum+1);
 	}
+  //aqui se gerera haciendo click en el boton
 	document.randform.randomfield.value = randomstring;
-       // window.onload = randomString;
+
+  //aqui quisiera que se genere el codigo ramdon apenas se cargue la pag
+ // window.onload.randform.randomfield.value = randomstring;
 }
 </script>
         
     </head>
-    <body>
+    <body onload="randomString()">
              <header>
                 <figure class="logo">
                     <img src="img/logo.png"/>
@@ -54,12 +57,10 @@ function randomString() {
   <div align="center"><label>GRACIAS POR PREFERIR SU BANCO DE PUNTOS</label></div> 
 
    <div align="center"><label>CON EL CODIGO GENERADO PUEDE IR A CANJEAR SU PRODUCTO</label></div> 
-    
-    
+   
+<div align="center"><input type="label" align="CENTER" name="randomfield" value="" ></div> 
     
 <input type="button" value="CREAR SU CODIGO" onClick="randomString();">&nbsp;
-<input type="text" name="randomfield" value="" >
-
 
 
 
@@ -67,12 +68,6 @@ function randomString() {
   </article><!-- /content -->
   
   </form>
-
-
-
-
-
-
 
             <script type="text/javascript" src="cordova-2.5.0.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
