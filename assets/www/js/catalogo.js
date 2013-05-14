@@ -37,7 +37,7 @@ x.ready(inicializarEventos);
            $("#productos").trigger("create");           
       $('#productos').listview('refresh');  
       for(var i=0;i<length;i++){
-       $("#ventana_emergente").append('<div data-role="popup" id="purchase'+productos[i].id+'" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;"> <h3>Desea Canjear sus pontos por este producto?</h3>  <p>'+ productos[i].categoria +': '+ productos[i].descripcion +' </p> <a href="canjear.html" data-role="button" data-rel="back" data-theme="b" data-icon="check" data-inline="true" data-mini="true">Canjear '+ productos[i].costo +'</a> <a href="catalogo.html" data-role="button" data-rel="back" data-inline="true" data-mini="true">Cancel</a> </div>'); 
+       $("#ventana_emergente").append('<div data-role="popup" id="purchase'+productos[i].id+'" data-theme="d" data-overlay-theme="b" class="ui-content" style="max-width:340px; padding-bottom:2em;"> <h3>Desea Canjear sus puntos por este producto?</h3>  <p>'+ productos[i].categoria +': '+ productos[i].descripcion +' </p> <a href="canjear.html" data-role="button" data-rel="back" data-theme="b" data-icon="check" data-inline="true" data-mini="true">Canjear '+ productos[i].costo +'</a> <a href="catalogo.html" data-role="button" data-rel="back" data-inline="true" data-mini="true">Cancel</a> </div>'); 
 
       }
   
