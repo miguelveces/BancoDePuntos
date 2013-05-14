@@ -3,7 +3,29 @@ x=$(document);
 x.ready(inicializarEventos);
   function inicializarEventos()
   {  
-   var productos_categoria = '[{"categoria": "Computadoras", "descripcion": "MacBook Pro", "costo": "200 pts", "id": "1", "imagen": "img/apple.png"},{"categoria": "Celulares", "descripcion": "Nokia", "costo": "70 pts", "id": "2", "imagen": "img/phone_lumia920.png"},{"categoria": "Celulares", "descripcion": "Samsung", "costo": "80 pts", "id": "3", "imagen": "img/phone_onex.png"},{"categoria": "Accesorios", "descripcion": "Reloj Digital", "costo": "300 pts", "id": "4", "imagen": "img/reloj.jpg"}]';  
+
+ (function($) {  
+    $.get = function(key)   {  
+        key = key.replace(/[\[]/, '\\[');  
+        key = key.replace(/[\]]/, '\\]');  
+        var pattern = "[\\?&]" + key + "=([^&#]*)";  
+        var regex = new RegExp(pattern);  
+        var url = unescape(window.location.href);  
+        var results = regex.exec(url);  
+        if (results === null) {  
+            return null;  
+        } else {  
+            return results[1];  
+        }  
+    }  
+})(jQuery);
+     var puntos = $.get("ptss");
+     console.log(puntos);
+     //$('#punto').html('');
+     $("#punto").append('Puntos: '+ puntos);
+
+    //json
+   var productos_categoria = '[{"categoria": "Computadoras", "descripcion": "MacBook Pro", "costo": "200 pts", "id": "1", "imagen": "img/apple.png"},{"categoria": "Celulares", "descripcion": "Nokia", "costo": "70 pts", "id": "2", "imagen": "img/phone_lumia920.png"},{"categoria": "Celulares", "descripcion": "Samsung", "costo": "80 pts", "id": "3", "imagen": "img/phone_onex.png"},{"categoria": "Accesorios", "descripcion": "Reloj Digital", "costo": "300 pts", "id": "4", "imagen": "img/reloj.png"}]';  
         
         $('[data-role=listview]').html('');     
          var productos = JSON.parse(productos_categoria);
@@ -22,5 +44,6 @@ x.ready(inicializarEventos);
  $("#ventana_emergente").trigger("create");
  $("#ventana_emergente").trigger("refresh");
  //$('#purchase').listview('refresh');
+
   }
 
