@@ -21,7 +21,7 @@ function LoginButton_onclick() {
             {
                 var pts = jsonArray[i].Puntos;
                 if (user == jsonArray[i].Nombre && pass == jsonArray[i].Numero) {
-                    window.location = 'principal.html?ptss=' + pts; 
+                    window.location = 'principal.html#catalogo?ptss=' + pts; 
                 }
             }
         },
