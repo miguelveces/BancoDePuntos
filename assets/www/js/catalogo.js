@@ -83,6 +83,4 @@ function obtener_get()
                 }
             }
 }
-
-
 });
